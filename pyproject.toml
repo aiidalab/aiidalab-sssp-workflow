@@ -1,6 +1,39 @@
 [build-system]
-requires = [
-    "setuptools>=42",
-    "wheel"
+build-backend = 'flit_core.buildapi'
+requires = ['flit_core >=3.4,<4']
+
+[project]
+name = "aiidalab-sssp"
+dynamic = ['version']   # read from aiidalab_sss_workflow/__init__.py
+authors = [{name = "Jusong Yu", email = "jusong.yu@psi.ch"}]
+maintainers = [{name = "Jusong Yu", email = "jusong.yu@psi.ch"}]
+description = "SSSP AiiDAlab app to run pseudopotential verificaiton and optimization"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {file="LICENSE"}
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Framework :: AiiDA",
+    "Development Status :: 5 - Production/Stable",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
 ]
-build-backend = "setuptools.build_meta"
+dependencies = [
+    "aiida-sssp-workflow",
+    "solara"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest~=7.0",
+]
+
+[project.urls]
+Documentation = "https://aiida-sssp-workflow.readthedocs.io/"
+Source = "https://github.com/aiidateam/aiida-sssp-workflow"
+
