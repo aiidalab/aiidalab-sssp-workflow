@@ -25,7 +25,9 @@ classifiers = [
 ]
 dependencies = [
     "aiida-sssp-workflow",
-    "solara"
+    "solara",
+    "vaex",
+    "anywidget",
 ]
 
 [project.optional-dependencies]
