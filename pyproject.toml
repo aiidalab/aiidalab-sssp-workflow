@@ -28,6 +28,7 @@ dependencies = [
     "solara",
     "vaex",
     "anywidget",
+    "humanfriendly",
 ]
 
 [project.optional-dependencies]

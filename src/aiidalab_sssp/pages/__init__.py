@@ -1,8 +1,9 @@
 import solara
 from solara.alias import rv
 
-from aiidalab_sssp.pages import explore, howto
+from aiidalab_sssp.pages import explore
 from aiidalab_sssp.data import articles, names
+from aiidalab_sssp.components import banner
 
 
 @solara.component
@@ -50,10 +51,10 @@ def Page():
     with solara.VBox() as main:
         solara.Title("Standard Solid-State Pseudopotential (SSSP) » Home")
         with solara.ColumnsResponsive(12):
-            howto.Overview()
+            banner.Overview()
         with solara.ColumnsResponsive([6, 6]):
             explore.Overview()
-            verification.Overview()
+            verify.Overview()
 
     return main
 
