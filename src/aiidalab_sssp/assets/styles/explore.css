@@ -1,0 +1,26 @@
+.v-application .title {
+  text-align: center;
+  font-size: 2em !important;
+  margin-top: 0.5em;
+}
+
+.legend {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(250px, 1fr));
+  justify-content: center;
+  align-items: center;
+  margin: 1em auto;
+}
+.legend .legend-item-marker {
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  margin-right: 0.5em;
+}
+.legend .legend-item {
+  display: flex;
+  align-items: center;
+  margin-right: 1em;
+  width: fit-content;
+  font-size: 14px;
+}

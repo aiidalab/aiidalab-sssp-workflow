@@ -1,0 +1,90 @@
+:root {
+  --element-box-size: 55px;
+}
+
+.ptable-outer {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.v-application .ptable {
+  display: flex !important;
+  row-gap: 12px;
+}
+.v-application .ptable .elements {
+  display: grid !important;
+  grid-template-columns: repeat(17, 1fr) 1fr;
+}
+
+.element {
+  height: var(--element-box-size);
+  width: var(--element-box-size);
+  margin: 1px;
+  user-select: none;
+  position: relative;
+  border-radius: 20%;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+}
+.element.element-2 {
+  grid-column-start: 18;
+}
+.element.element-5 {
+  grid-column-start: 13;
+}
+.element.element-13 {
+  grid-column-start: 13;
+}
+.element.element-57 {
+  grid-column-start: 4;
+}
+.element.element-89 {
+  grid-column-start: 4;
+}
+.element.disabled {
+  pointer-events: none;
+}
+.element:hover {
+  filter: brightness(85%);
+  transform: scale(1.2);
+  z-index: 10;
+}
+.element .element-symbol {
+  font-size: calc(0.32 * var(--element-box-size));
+  line-height: 1;
+}
+.element .element-info {
+  font-size: 13px;
+  line-height: 1;
+}
+
+.star-placeholder {
+  display: flex;
+  font-weight: bold;
+  align-self: center;
+  justify-self: center;
+  grid-column-start: 3;
+}
+
+@media screen and (max-width: 1280px) {
+  :root {
+    --element-box-size: 40px;
+  }
+
+  .element_symbol {
+    font-size: calc(0.4 * var(--element-box-size));
+  }
+
+  .element-info {
+    display: none;
+  }
+}
